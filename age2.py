@@ -39,7 +39,7 @@ def freeze_mem(hProcess, info):
     if value:
         food_point = value + 0xA8           # 当前食物地址指针 = 基址 + 偏移地址
         FOOD_ADDR = cheat_engine.read_process(hProcess, food_point, 4)
-        log.puts('food_point %x, FOOD_ADDR: %x' % (food_point, FOOD_ADDR))
+        # log.puts('food_point %x, FOOD_ADDR: %x' % (food_point, FOOD_ADDR))
     if FOOD_ADDR:
         write_value(hProcess, FOOD_ADDR + 0, 90000)
         write_value(hProcess, FOOD_ADDR + 4, 90000)
